@@ -6,26 +6,37 @@ Conceptos `Css` que ya se  domina en este proyecto:
 Conceptos dominados hasta ahora
 CSS
 
-    ✔ Selectores
-    ✔ Herencia
-    ✔ Box model
+    ✔️ Selectores
+    ✔️ Herencia
+    ✔️ Box model
 
 Layout
 
-    ✔ Flexbox
-    ✔ Position
+    ✔️ Grid
+    ✔️ Flexbox
+    ✔️ Position
 
 UI
 
-    ✔ Hover
-    ✔ Badges
-    ✔ Botones
+    ✔️ Hover
+    ✔️ Badges
+    ✔️ Botones
 
 Responsive
 
-    ✔ Media queries
-    ✔ Mobile first
-    ✔ Breakpoints
+    ✔️ Media queries
+    ✔️ Mobile first
+    ✔️ Breakpoints
+
+Tu proyecto ya utiliza:
+
+    ✅ Flexbox
+    ✅ Position (absolute / sticky / fixed)
+    ✅ Hover y transiciones
+    ✅ Layout de e-commerce
+    ✅ Sidebar de filtros
+    ✅ Responsive design
+    ✅ Breakpoints reales
 
  Este Proyecto Final `Mi Tienda` ahora se añade:
 

@@ -92,6 +92,8 @@ body {
   background: #f5f5f5;
   padding: 15px;
   border-radius: 8px;
+  position: sticky;
+  top: 60px;
 }
 
 .filtro {
@@ -234,4 +236,69 @@ El .badge se posiciona respecto al .producto porque el padre tiene relative.*/
   color: white;
   padding: 20px;
 }
+/*Esto adapta el layout para laptops pequeñas / tablets horizontales.*/
+@media (max-width: 1024px) {
+
+  .topbar {
+    padding: 10px 20px;
+  }
+
+  .contenedor {
+    padding: 20px;
+  }
+
+  .filtros {
+    width: 180px;
+  }
+
+  .producto {
+    width: 200px;
+  }
+
+}
+
+/*Tablet vertical*/
+@media (max-width: 768px) {
+
+  .contenedor {
+    flex-direction: column;
+  }
+
+  .filtros {
+    width: 100%;
+    position: static;
+  }
+
+  .productos {
+    justify-content: center;
+  }
+
+}
+/*Movil Aquí reorganizamos el header y reducimos elementos.*/
+@media (max-width: 480px) {
+
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    height: 200px;
+    padding: 20px;
+  }
+
+  .producto {
+    width: 90%;
+  }
+
+  .buscador input {
+    width: 150px;
+  }
+
+}
+
 
