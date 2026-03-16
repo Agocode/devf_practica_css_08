@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+/*Diferencia Padding con Margin: El padding es el espacio interior, mientras que el margin es el espacio exterior al borde del elemento.*/   
+body {
+  margin: 0;
+  font-family: Arial;
+}
+/*Topbar incluye Logo -Buscador - Carrito*/
+.topbar {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+}
+/*Buscador*/
+.buscador {
+  display: flex;
+  gap: 5px;
+}
+
+.buscador input {
+  padding: 8px;
+  /*width: 50px;*/
+}
+
+.buscador button {
+  padding: 8px 12px;
+}
+/*Carrito con contador (absolute)*/
+.carrito {
+  position: relative;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.contador {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+
+/*Flexbox — menú horizontal*/
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #eee;
+  padding: 10px;
+}
+/*Position Sticky (menu - cuando haces scroll se queda pegado arriba)*/
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+.menu:hover {
+
+  background: orange; /* Efecto hover para resaltar los enlaces */
+
+  transition: 0.3s; /* Suavizar la transición del hover */
+
+}
+/*Banner principal*/
+.hero {
+  height: 300px;
+  background: linear-gradient(to right, #222, #555);
+  color: white;
+  /*Aquí usamos el centrado perfecto con Flexbox:*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.filtros {
+  width: 220px;
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.filtro {
+  margin-bottom: 20px;
+}
+
+.filtro label {
+  display: block;
+  margin: 5px 0;
+}
+.contenedor {
+  display: flex;
+  gap: 0px;
+  padding: 20px 0px 20px 20px;  /*(arriba, derecha, abajo, izquierda)*/
+  margin: 0px 0px 0px 0px;
+  align-items: flex-start;
+}
+/* PRODUCTOS Flexbox — grid de productos
+display:flex >>>	activa flexbox
+flex-wrap	>>> permite varias filas
+justify-content	>>> alinea horizontal
+gap	>>> espacio entre elementos */
+.productos {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  column-gap: 25px;     /*interno*/
+  padding: 5px; /*externo*/
+  
+  }
+/*Tarjeta de producto
+position: relative
+Esto sirve para posicionar elementos absolutos dentro. 
+Base Mobile First*/
+.producto {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  row-gap: 0px;
+  padding: 0px;
+  border-radius: 0px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+  transform: scale(1.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.producto > * {
+  margin-top: 0px; /* Ajusta este valor para acercarlos */
+}
+/*Position Absolute (badge de oferta)
+El .badge se posiciona respecto al .producto porque el padre tiene relative.*/
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+.wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+/*Imagen*/
+.imagen-producto {
+  position: relative;
+}
+.img1 {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.img2 {
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  object-fit: cover;
+}
+.imagen-producto:hover .img2 {
+  opacity: 1;
+}
+
+.rating {
+  color: gold;
+  margin: -15px 0px 10px 0px;
+  font-size: 14px;
+}
+.precio {
+  margin: 0px 0px 5px 5px;
+  color: green; /* sobrescribe el color heredado */
+  font-weight: bold;
+}
+/*Botón*/
+.boton {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: black;
+  color: white;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.boton:hover {
+  background: orange;
+}
+
+/*Position Fixed (chat flotante)*/
+.chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: orange;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+
+.footer {
+  position: static;
+  background: #222;
+  color: white;
+  padding: 20px;
+}
+
