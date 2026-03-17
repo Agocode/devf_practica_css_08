@@ -3,45 +3,25 @@ En esta practica ya estamos utilizando `Html` y `Css` mas completo en nuestro pr
 
 Conceptos `Css` que ya se  domina en este proyecto:
 
-Conceptos dominados hasta ahora
-CSS
+Este Proyecto Final utiliza todas las tecnicas profesionales:
 
-    ✔️ Selectores
-    ✔️ Herencia
-    ✔️ Box model
+    ✔️ Flexbox → header, menú, buscador
+    ✔️ CSS Grid → layout y productos
+    ✔️ Position → badges, wishlist, sticky
+    ✔️ Responsive design
+    ✔️ hover y animaciones
 
-Layout
+Nivel front-end moderno real.
 
-    ✔️ Grid
-    ✔️ Flexbox
-    ✔️ Position
 
-UI
+ 1️⃣ Este Proyecto Final `Mi Tienda` ahora tiene:  
 
-    ✔️ Hover
-    ✔️ Badges
-    ✔️ Botones
-
-Responsive
-
-    ✔️ Media queries
-    ✔️ Mobile first
-    ✔️ Breakpoints
-
-Tu proyecto ya utiliza:
-
-    ✅ Flexbox
-    ✅ Position (absolute / sticky / fixed)
-    ✅ Hover y transiciones
-    ✅ Layout de e-commerce
-    ✅ Sidebar de filtros
-    ✅ Responsive design
-    ✅ Breakpoints reales
-
- Este Proyecto Final `Mi Tienda` ahora se añade:
-
-    1️⃣ Sidebar de filtros
-    2️⃣ Rating de productos ⭐
-    3️⃣ Botón Wishlist ❤️
-    4️⃣ Hover profesional en tarjetas
-    5️⃣ Imagen secundaria al hacer hover   
+    🧭 Header con buscador
+    📦 Grid con CSS Grid
+    📂 Sidebar filtros
+    ⭐ Rating
+    ❤️ Wishlist
+    🖼 Hover imágenes
+    📊 Barra de ordenación
+    📄 Paginación
+    🛒 Mini carrito desplegable

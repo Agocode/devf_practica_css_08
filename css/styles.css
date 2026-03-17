@@ -46,6 +46,27 @@ body {
   padding: 3px 6px;
   border-radius: 50%;
 }
+.mini-carrito {
+  position: absolute;
+  top: 29px;
+  right: 0;
+  width: 220px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  z-index: 2000;
+}
+.carrito:hover .mini-carrito {
+  display: block;
+}
+
+.mini-carrito .item {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
 
 
 /*Flexbox — menú horizontal*/
@@ -105,26 +126,43 @@ body {
   margin: 5px 0;
 }
 .contenedor {
-  display: flex;
+  display: grid;
+  grid-template-columns: 220px 1fr;/*220px 1fr;*/
   gap: 0px;
-  padding: 20px 0px 20px 20px;  /*(arriba, derecha, abajo, izquierda)*/
+  padding: 20px 20px 20px 20px;  /*(arriba, derecha, abajo, izquierda)*/
   margin: 0px 0px 0px 0px;
   align-items: flex-start;
 }
+
+.zona-productos {
+  display: flex;
+  flex-direction: column;
+}
+/*Bara de Ordenacion "Sort"*/
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ordenar select {
+  padding: 5px;
+}
+
 /* PRODUCTOS Flexbox — grid de productos
 display:flex >>>	activa flexbox
 flex-wrap	>>> permite varias filas
 justify-content	>>> alinea horizontal
 gap	>>> espacio entre elementos */
 .productos {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  /*repeat(4, 1fr)*/
   row-gap: 40px;
   column-gap: 25px;     /*interno*/
-  padding: 5px; /*externo*/
+  padding: 0px; /*externo*/
   
   }
 /*Tarjeta de producto
@@ -132,7 +170,7 @@ position: relative
 Esto sirve para posicionar elementos absolutos dentro. 
 Base Mobile First*/
 .producto {
-  width: 220px;
+  width: 100%;;
   display: flex;
   flex-direction: column;
   background: white;
@@ -218,6 +256,27 @@ El .badge se posiciona respecto al .producto porque el padre tiene relative.*/
   background: orange;
 }
 
+.paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.paginacion button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+.paginacion .activo {
+  background: black;
+  color: white;
+}
+
+
+
 /*Position Fixed (chat flotante)*/
 .chat {
   position: fixed;
@@ -236,47 +295,44 @@ El .badge se posiciona respecto al .producto porque el padre tiene relative.*/
   color: white;
   padding: 20px;
 }
-/*Esto adapta el layout para laptops pequeñas / tablets horizontales.*/
+/*LAPTOP*/
 @media (max-width: 1024px) {
-
-  .topbar {
-    padding: 10px 20px;
-  }
-
-  .contenedor {
+  .hero {
+    height: 200px;
     padding: 20px;
-  }
-
-  .filtros {
-    width: 180px;
-  }
-
-  .producto {
-    width: 200px;
   }
 
 }
 
-/*Tablet vertical*/
+/*TABLET*/
 @media (max-width: 768px) {
 
   .contenedor {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .filtros {
     width: 100%;
     position: static;
   }
+  .hero {
+    height: 200px;
+    padding: 20px;
+  }
+  .barra-superior {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-  .productos {
-    justify-content: center;
+  .mini-carrito {
+    top: 29px;
+    right: 5px;
+    left: auto;
   }
 
 }
-/*Movil Aquí reorganizamos el header y reducimos elementos.*/
+/*MOVIL*/
 @media (max-width: 480px) {
-
   .topbar {
     flex-direction: column;
     gap: 10px;
@@ -290,13 +346,10 @@ El .badge se posiciona respecto al .producto porque el padre tiene relative.*/
     height: 200px;
     padding: 20px;
   }
-
-  .producto {
-    width: 90%;
-  }
-
-  .buscador input {
-    width: 150px;
+  .mini-carrito {
+    top: 30px;
+    right: auto;
+    left: -100px;
   }
 
 }
