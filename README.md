@@ -28,7 +28,7 @@ Responsive
     ✔️ Mobile first
     ✔️ Breakpoints
 
-Tu proyecto ya utiliza:
+Se utiliza:
 
     ✅ Flexbox
     ✅ Position (absolute / sticky / fixed)
@@ -38,7 +38,7 @@ Tu proyecto ya utiliza:
     ✅ Responsive design
     ✅ Breakpoints reales
 
- Este Proyecto Final `Mi Tienda` ahora se añade:
+ Este Proyecto Final `Mi Tienda` ahora se añade los elementos:
 
     1️⃣ Sidebar de filtros
     2️⃣ Rating de productos ⭐
