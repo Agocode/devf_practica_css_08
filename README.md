@@ -3,7 +3,7 @@ En esta practica ya estamos utilizando `Html` y `Css` mas completo en nuestro pr
 
 Conceptos `Css` que ya se  domina en este proyecto:
 
-Este Proyecto Final utiliza todas las tecnicas profesionales:
+🔥Este Proyecto Final utiliza todas las tecnicas Css profesionales:
 
     ✔️ Flexbox → header, menú, buscador
     ✔️ CSS Grid → layout y productos
@@ -13,8 +13,7 @@ Este Proyecto Final utiliza todas las tecnicas profesionales:
 
 Nivel front-end moderno real.
 
-
- 1️⃣ Este Proyecto Final `Mi Tienda` ahora tiene:  
+🔥 Este Proyecto Final `Mi Tienda` ahora tiene:  
 
     🧭 Header con buscador
     📦 Grid con CSS Grid
